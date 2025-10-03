@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafecito con Ori</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script type="module" src="./index.js"></script>
+</head>
+
+<body id="inicio" class="font-sans text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white/90 shadow sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
+            <!-- Logo -->
+            <h1 class="text-2xl font-bold text-sky-700">Fumigaciones</h1>
+
+            <!-- Botón Hamburguesa (solo en mobile) -->
+            <button id="menuBtn" class="md:hidden text-sky-700 text-3xl focus:outline-none z-50 relative">
+                <i class="bx bx-menu"></i>
+            </button>
+
+            <!-- Menú Desktop -->
+            <nav class="space-x-6 hidden md:flex">
+                <a href="#inicio" class="hover:text-sky-600">Inicio</a>
+                <a href="#sobre" class="hover:text-sky-600">Sobre mí</a>
+                <a href="#servicios" class="hover:text-sky-600">Servicios</a>
+                <a href="#imagenes" class="hover:text-sky-600">Ilustraciones</a>
+                <a href="#contacto" class="hover:text-sky-600">Contacto</a>
+            </nav>
+        </div>
+
+        <!-- Menú Mobile Overlay -->
+        <nav id="mobileMenu"
+            class="hidden absolute top-0 left-0 w-full h-screen bg-white/95 flex flex-col items-center justify-center space-y-8 text-xl">
+            <a href="#inicio" class="hover:text-sky-600">Inicio</a>
+            <a href="#sobre" class="hover:text-sky-600">Sobre mí</a>
+            <a href="#servicios" class="hover:text-sky-600">Servicios</a>
+            <a href="#imagenes" class="hover:text-sky-600">Ilustraciones</a>
+            <a href="#contacto" class="hover:text-sky-600">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section
+        class="relative bg-cover bg-center bg-[url('https://img.freepik.com/premium-photo/health-workers-hazmat-suit-clothes-gas-mask-spraying-disinfectant-liquid-pesticide-virus_326694-259578.jpg')] h-screen py-20 px-6 text-center">
+        <!-- Overlay negro -->
+        <div class="absolute inset-0 bg-black/50"></div>
+
+        <!-- Contenido -->
+        <div class="relative z-10">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                Lorem ipsum dolor sit amet.
+            </h2>
+            <p class="text-lg max-w-2xl mx-auto mb-8 text-white">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Nesciunt natus doloribus quia corrupti. Harum, debitis quia dolore deserunt facilis libero!
+            </p>
+            <a href="#contacto" class="bg-sky-300 text-black px-6 py-3 rounded-full shadow hover:bg-sky-400 transition">
+                Reserva tu lugar
+            </a>
+        </div>
+    </section>
+
+
+    <!-- Sobre mí -->
+    <section id="sobre" class="py-16 px-6 max-w-5xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+            <img src="https://gooddecisions.com/wp-content/uploads/2023/10/Exterminator-for-Your-House-1024x574.png"
+                alt="Ori" class="h-80 rounded-2xl shadow-lg">
+            <div>
+                <h3 class="text-3xl font-semibold text-sky-700 mb-4">About me</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quam ut numquam veritatis id assumenda a, iusto doloremque
+                    cupiditate non veniam voluptas alias, fuga soluta explicabo?
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Nuestros Servicios</h2>
+
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+                <!-- Servicio -->
+                <div class="bg-white shadow rounded-xl p-6 hover:shadow-lg transition">
+                    <h3 class="text-xl font-semibold text-sky-700 mb-2">Fumigación</h3>
+                    <p class="text-gray-600 text-sm">
+                        Realizamos servicios de fumigaciones en Ciudad Autónoma de Buenos Aires y Provincia de Buenos
+                        Aires.
+                    </p>
+                </div>
+
+                <div class="bg-white shadow rounded-xl p-6 hover:shadow-lg transition">
+                    <h3 class="text-xl font-semibold text-sky-700 mb-2">Desratización</h3>
+                    <p class="text-gray-600 text-sm">
+                        Las desratizaciones periódicas son preventivas y curativas. También hacemos desratizaciones
+                        previas a la demolición.
+                    </p>
+                </div>
+
+                <div class="bg-white shadow rounded-xl p-6 hover:shadow-lg transition">
+                    <h3 class="text-xl font-semibold text-sky-700 mb-2">Fumigación de contenedores</h3>
+                    <p class="text-gray-600 text-sm">
+                        Es esencial para prevenir el transporte de plagas u otros organismos nocivos a través de los
+                        contenedores.
+                    </p>
+                </div>
+
+                <div class="bg-white shadow rounded-xl p-6 hover:shadow-lg transition">
+                    <h3 class="text-xl font-semibold text-sky-700 mb-2">Desinsectación</h3>
+                    <p class="text-gray-600 text-sm">
+                        Se elimina o controla la población de insectos y otros artrópodos.
+                    </p>
+                </div>
+
+                <div class="bg-white shadow rounded-xl p-6 hover:shadow-lg transition">
+                    <h3 class="text-xl font-semibold text-sky-700 mb-2">Control de plagas urbanas</h3>
+                    <p class="text-gray-600 text-sm">
+                        Las plagas urbanas transmiten enfermedades al hombre y su control es clave para la salud.
+                    </p>
+                </div>
+
+                <div class="bg-white shadow rounded-xl p-6 hover:shadow-lg transition">
+                    <h3 class="text-xl font-semibold text-sky-700 mb-2">Control de clavel del aire</h3>
+                    <p class="text-gray-600 text-sm">
+                        El clavel del aire perjudica a los árboles y en grandes cantidades afecta su normal crecimiento.
+                    </p>
+                </div>
+
+                <div class="bg-white shadow rounded-xl p-6 hover:shadow-lg transition">
+                    <h3 class="text-xl font-semibold text-sky-700 mb-2">Desinfección</h3>
+                    <p class="text-gray-600 text-sm">
+                        Se destruyen virus, bacterias y otros microbios que causan infecciones y enfermedades.
+                    </p>
+                </div>
+
+                <div class="bg-white shadow rounded-xl p-6 hover:shadow-lg transition">
+                    <h3 class="text-xl font-semibold text-sky-700 mb-2">Fumigación de árboles</h3>
+                    <p class="text-gray-600 text-sm">
+                        Previene y controla enfermedades que pueden poner en peligro la vida y crecimiento de los
+                        árboles.
+                    </p>
+                </div>
+
+                <div class="bg-white shadow rounded-xl p-6 hover:shadow-lg transition">
+                    <h3 class="text-xl font-semibold text-sky-700 mb-2">Captura de comadrejas</h3>
+                    <p class="text-gray-600 text-sm">
+                        Los daños más destacados son por sus pulgas, mordidas y la contaminación de la comida.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Grid de Imágenes con Overlay -->
+    <section id="imagenes" class="py-12 px-2 bg-gray-50">
+        <div class="container mx-auto max-w-6xl">
+            <!-- <h2 class="text-3xl font-bold text-center mb-10">Imagenes</h2> -->
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Item 1 -->
+                <div class="relative group rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://ambilur.com/wp-content/uploads/contacto-ambilur.jpg"
+                        class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                        alt="Desinfección">
+                    <div
+                        class="absolute inset-0 bg-black/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <h3 class="text-white text-xl font-semibold text-center px-4">Desinfección</h3>
+                    </div>
+                </div>
+
+
+                <!-- Item 2 -->
+                <div class="relative group rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://clyma.com/wp-content/uploads/2019/01/desratizacion-6.jpg"
+                        class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                        alt="Desratización">
+                    <div
+                        class="absolute inset-0 bg-black/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <h3 class="text-white text-xl font-semibold text-center px-4">Desratización</h3>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="relative group rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://grupohisesa.co/images/servicios/manejo-plagas/TERMONEBULIZACION_1000%20X%20617px_002.jpg"
+                        class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                        alt="Fumigación">
+                    <div
+                        class="absolute inset-0 bg-black/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <h3 class="text-white text-xl font-semibold text-center px-4">Fumigación</h3>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="relative group rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://zeropestpr.com/wp-content/uploads/2023/06/control-de-cucarachas.jpg"
+                        class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                        alt="Control de plagas">
+                    <div
+                        class="absolute inset-0 bg-black/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <h3 class="text-white text-xl font-semibold text-center px-4">Control de Plagas</h3>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="relative group rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://img.freepik.com/premium-photo/pest-control-technician-protective-suit-is-spraying-pesticide-bush-symbolizing-p_924727-78882.jpg"
+                        class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                        alt="Fumigación de árboles">
+                    <div
+                        class="absolute inset-0 bg-black/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <h3 class="text-white text-xl font-semibold text-center px-4">Fumigación de Árboles</h3>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="relative group rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://fumigar.com.mx/wp-content/uploads/2022/12/fumigacion-contenedores.jpg"
+                        class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                        alt="Contenedores">
+                    <div
+                        class="absolute inset-0 bg-black/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <h3 class="text-white text-xl font-semibold text-center px-4">Fumigación de Contenedores</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="bg-sky-700 text-white py-16 px-6 text-center">
+        <h3 class="text-3xl font-semibold mb-6">Solicita tu presupuesto</h3>
+        <p class="mb-8">Contactanos para coordinar tu servicio de fumigación o control de plagas.</p>
+        <a href="https://wa.me/54911234567890?text=Hola!%20Quisiera%20solicitar%20un%20presupuesto%20para%20fumigación."
+            target="_blank"
+            class="bg-white text-sky-700 px-6 py-3 rounded-full shadow font-bold hover:bg-blue-100 transition">
+            Escribir por WhatsApp
+        </a>
+    </section>
+
+
+    <!-- Modal -->
+    <div id="imageModal" class="fixed z-50 inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+        <div class="bg-white p-4 rounded shadow-lg relative">
+            <button id="closeModal" class="absolute top-2 right-2 text-xl font-bold">&times;</button>
+            <img src="./images/img para modal.jpeg" alt="Imagen" class="max-w-full max-h-[80vh]">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contactos" class="bg-black/95 text-gray-200 pt-6">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8 pb-8">
+            <!-- Descripción -->
+            <div>
+                <p class="text-gray-400 text-sm">
+                    Empresa de fumigación y control de plagas. Servicios profesionales en CABA y Gran Buenos Aires.
+                </p>
+            </div>
+
+            <!-- Redes sociales / Contacto -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Seguinos / Contacto</h3>
+                <div class="flex gap-4 text-2xl mb-4">
+                    <a href="#" class="hover:text-blue-400"><i class='bx bxl-facebook'></i></a>
+                    <a href="#" class="hover:text-pink-400"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://wa.me/54911234567890" target="_blank" class="hover:text-green-500"><i
+                            class='bx bxl-whatsapp'></i></a>
+                </div>
+                <p class="text-gray-400 text-sm">
+                    Consultas al: <a href="tel:+541112345678" class="hover:text-white">+54 11 1234-5678</a><br>
+                    Email: <a href="mailto:contacto@fumigaciones.com"
+                        class="hover:text-white">contacto@fumigaciones.com</a><br>
+                    Horarios: Lun a Vie 9:00 - 18:00
+                </p>
+            </div>
+        </div>
+
+        <!-- Mapa -->
+        <div class="w-full h-80 px-6 pb-8">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.838946929618!2d-58.38155948477036!3d-34.60368498045954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc1d563f7f%3A0x8f8f9d82b56b57a!2sObelisco!5e0!3m2!1ses-419!2sar!4v1671234567890!5m2!1ses-419!2sar"
+                width="90%" height="100%" style="border:0; margin: auto;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" class="rounded-xl shadow-lg">
+            </iframe>
+        </div>
+
+        <!-- Copyright -->
+        <div class="bg-black/90 py-4 text-center text-gray-500 text-sm">
+            <p>&copy; 2025 Fumigaciones XYZ. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+
+
+    <!-- Botón WhatsApp flotante -->
+    <a href="https://wa.me/54911234567890?text=Hola!%20Estoy%20interesado/a%20en%20la%20charla,%20quisiera%20reservar%20mi%20lugar."
+        target="_blank" class="fixed right-5 bottom-5 text-4xl">
+        <i class='bg-green-400 rounded-full p-2 text-white bx bxl-whatsapp'></i>
+    </a>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+
+</html>
